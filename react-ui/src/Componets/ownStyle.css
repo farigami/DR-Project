@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 30px;
+    background-color: rgba(167, 214, 251, 0.7);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: none;
+}
+
+@media (max-width: 700px) {
+  div {
+      margin: 1rem 1rem;
+      width: auto;
+  }
+}
+
+@keyframes emojibeat {
+
+  0%,
+  100%,
+  40%,
+  80% {
+      -webkit-transform: scale(.75);
+      -moz-transform: scale(.75);
+      -o-transform: scale(.75);
+      -ms-transform: scale(.75);
+      transform: scale(.75)
+  }
+
+  20%,
+  60% {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -o-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1)
+  }
+}
+
+@-moz-keyframes emojibeat {
+
+  0%,
+  100%,
+  40%,
+  80% {
+      -moz-transform: scale(.75);
+      transform: scale(.75)
+  }
+
+  20%,
+  60% {
+      -moz-transform: scale(1);
+      transform: scale(1)
+  }
+}
+
+@-webkit-keyframes emojibeat {
+
+  0%,
+  100%,
+  40%,
+  80% {
+      -webkit-transform: scale(.75);
+      transform: scale(.75)
+  }
+
+  20%,
+  60% {
+      -webkit-transform: scale(1);
+      transform: scale(1)
+  }
+}
+
+@-ms-keyframes emojibeat {
+
+  0%,
+  100%,
+  40%,
+  80% {
+      -ms-transform: scale(.75);
+      transform: scale(.75)
+  }
+
+  20%,
+  60% {
+      -ms-transform: scale(1);
+      transform: scale(1)
+  }
+}
+
+.emoji {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: emojibeat 1s infinite;
+  -moz-animation: emojibeat 1s infinite;
+  -ms-animation: emojibeat 1s infinite;
+  animation: emojibeat 1s infinite;
+}
+
+.just-element {
+  margin-top: 20%;
+  text-align: center;
+}
+
+.container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+}
