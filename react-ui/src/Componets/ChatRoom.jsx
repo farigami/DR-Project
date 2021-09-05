@@ -9,7 +9,7 @@ const ChatRoom = () => {
     const [messages, setMessages] = useState([])
 
     const [text, setText] = useState('')
-    
+
     const CRSocket = useRef(null)
 
     const sendMessage = () => {
@@ -34,12 +34,16 @@ const ChatRoom = () => {
                 <Card.Header>#{params.name}</Card.Header>
                 <Card.Body style={{ overflowY: 'scroll' }}>
                     {messages.length > 0 ?
-                        messages.map(message => {
+                        messages.map((message, index) => {
                             return (
-                                <h5>{message.message}</h5>
+                                <p key={index}>
+                                    <div style={{ display: 'inline-block' }}>
+                                        <div className="circle" style={{ float: 'left' }} />
+                                        <h4 style={{ float: 'right' }}>{message.message}</h4>
+                                    </div>
+                                </p>
                             )
                         })
-
                         : <h5 className="text-muted" >Будь первым</h5>}
                 </Card.Body>
                 <Card.Footer>

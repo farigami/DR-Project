@@ -2,12 +2,6 @@ import { Card, Col, Row, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './ownStyle.css'
 
-const isNewItem = (item_state) => {
-  if (item_state) {
-    return <small className='float-right'>Новинка</small>
-  }
-};
-
 const Cards = ({ items, handleAddProduct}) => {
   return (
     <>
@@ -23,7 +17,7 @@ const Cards = ({ items, handleAddProduct}) => {
               </Card.Body>
               <Card.Footer>
                 <small className='float-left'>{item.price}₽</small>
-                {isNewItem(item.item_new)}
+                {item.item_new ? <small className='float-right'>Новинка</small> : null}
                 <Button
                   variant='outline-info'
                   size='lg'

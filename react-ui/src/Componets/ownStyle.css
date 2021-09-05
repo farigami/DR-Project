@@ -109,3 +109,11 @@ body{
   grid-template-columns: 1fr 1fr 1fr; 
   grid-template-rows: 1fr 1fr 1fr; 
 }
+
+.circle {
+  background: #456BD9;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+}

@@ -1,8 +1,9 @@
 from channels.generic.websocket import AsyncJsonWebsocketConsumer
 import json
 
+
 class ChatRoomConsumer(AsyncJsonWebsocketConsumer):
-    groups = ['chat']
+    # groups = ['chat']
     async def connect(self):
         self.room_name = self.scope['url_route']['kwargs']['room_name']
         self.room_group_name = 'chat_%s' % self.room_name
@@ -11,6 +12,7 @@ class ChatRoomConsumer(AsyncJsonWebsocketConsumer):
             self.room_group_name,
             self.channel_name
         )
+
         await self.accept()
         print(f'Anon connect {self.room_name}')
 
@@ -32,8 +34,6 @@ class ChatRoomConsumer(AsyncJsonWebsocketConsumer):
                 'message': message
             }
         )
-
-
 
     async def chat_message(self, event):
         message = event['message']

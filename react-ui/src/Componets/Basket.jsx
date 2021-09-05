@@ -18,7 +18,7 @@ const Basket = ({ baskets, handleDeleteProduct }) => {
               fullPrice += item.price
               return (
                 <p key={"basket" + item.id * fullPrice} style={{ fontSize: '15px' }}>
-                  <img src={item.photo} alt='' style={{ width: '30px', height: '30px' }}></img>
+                  <img src={item.photo} alt='' style={{ width: '30px', height: '30px' }} />
                   {'  ' + item.item_name} {item.price}₽ <CloseButton onClick={() => handleDeleteProduct(item.id)} />
                 </p>
               )
