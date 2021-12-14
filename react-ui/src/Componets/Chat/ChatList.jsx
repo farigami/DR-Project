@@ -3,7 +3,7 @@ import { Button, Card, InputGroup, FormControl } from "react-bootstrap";
 
 
 const ChatList = () => {
-    const [channels, setCannels] = useState([]);
+    const [channels, setCannels] = useState([null]);
 
     const [title, setTitle] = useState('')
 
@@ -28,10 +28,10 @@ const ChatList = () => {
         }
         return () => CLSocket.current.close();
     }, [])
-    console.log(channels)
+    
     return (
         <>
-            <Card className='ml-auto mr-auto' border="info" style={{ width: '360px', height: '500px' }}>
+            <Card className='ml-auto mr-auto' border="info" style={{ width: '360px', height: '600px' }}>
                 <Card.Header>
                     <h2>Список каналов</h2>
                 </Card.Header>

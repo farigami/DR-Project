@@ -1,6 +1,7 @@
 import { Card, Col, Row, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './ownStyle.css'
+import '../ownStyle.css'
+
 
 const Cards = ({ items, handleAddProduct}) => {
   return (

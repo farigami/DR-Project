@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 30px;
+    background-color: rgba(167, 214, 251, 0.7);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: none;
+}
+
+
+.just-element {
+  margin-top: 20%;
+  text-align: center;
+}
+
+.container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+}
+

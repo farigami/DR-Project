@@ -38,6 +38,9 @@ class ChatRoomConsumer(AsyncJsonWebsocketConsumer):
     async def chat_message(self, event):
         message = event['message']
         print(event)
-        await self.send_json({
-            'message': message
-        })
+        await self.send_json(
+                {   
+                    'user-color': None,
+                    'message': message
+                }
+            )

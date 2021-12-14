@@ -1,0 +1,44 @@
+.Converter-Card{
+   width: 500px;
+   height: 550px;
+   background: #4d4d4d;
+   border: 4px solid #81a7d0;
+}
+
+.Converter-Header{
+    margin-top: 5%;
+}
+
+.Converter-Toggle{
+    width: 250px;
+    height: 50px;
+    background-color: #6c6969;
+}
+
+.Converter-Menu{
+    width: 250px;
+    height: 200px;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple #33cc33;
+    scrollbar-width: thin;
+    
+}
+
+.Converter-Item{
+    background-color: #808080;
+    color: aliceblue;
+}
+
+.Converter-InputBlock{
+    margin-top: 50px;
+}
+
+.Converter-Input{
+    background-color: #e8e7e7;
+    border-radius: 5px;
+    width: 320px;
+    height: 45px;
+    border: 5px #33cc33;
+    text-align: center;
+    outline: none;
+}

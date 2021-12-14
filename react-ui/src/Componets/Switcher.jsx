@@ -1,12 +1,18 @@
 import React, { useCallback, useMemo, useState } from "react";
 import { Button, ButtonGroup } from "react-bootstrap";
-import Market from "./Market"
-import ChatList from "./ChatList";
+
+import Market from "./Market/Market"
+import ChatList from "./Chat/ChatList";
+import Converter from "./Converter/Converter";
+
+import Home from "./Home";
+
 
 
 const Switcher = () => {
   const market = useMemo(() => <Market />, []);
   const chatlist = useMemo(() => <ChatList />, []);
+  const converter = useMemo(() => <Converter />, [])
   const [content, setContent] = useState(null)
 
   const useSetContentOnClick = (view) => {
@@ -14,9 +20,11 @@ const Switcher = () => {
       setContent(view)
     }, [view]);
   }
+  
   return (
     <>
-      <ButtonGroup className='mb-3'>
+    <div className="m-0" style={{ textAlign:'center' }}>
+      <ButtonGroup className="mb-3">
         <Button
           disabled={content === market}
           onClick={useSetContentOnClick(market)}
@@ -32,14 +40,16 @@ const Switcher = () => {
           Chat
         </Button>
         <Button
-          disabled={content === chatlist}
-          onClick={useSetContentOnClick(chatlist)}
+          disabled={content === converter}
+          onClick={useSetContentOnClick(converter)}
           variant='outline-success'
         >
-          Crypto
+          Currency
         </Button>
       </ButtonGroup>
+      {content == null ? <Home /> : null}
       {content}
+    </div>
     </>
   )
 }

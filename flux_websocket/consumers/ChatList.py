@@ -38,7 +38,5 @@ class ChatListConsumer(AsyncJsonWebsocketConsumer):
                 }
             )
 
- 
-
     async def room_list_message(self, event):
         await self.send_json(event['channel'])

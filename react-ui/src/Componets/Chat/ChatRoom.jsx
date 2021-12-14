@@ -30,7 +30,7 @@ const ChatRoom = () => {
     return (
         <>
             <br />
-            <Card className='mx-auto' style={{ height: '750px', width: '500px' }}>
+            <Card className='mx-auto' style={{ height: '650px', width: '500px' }}>
                 <Card.Header>#{params.name}</Card.Header>
                 <Card.Body style={{ overflowY: 'scroll' }}>
                     {messages.length > 0 ?

@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button, CloseButton } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './ownStyle.css'
+import './Market.css'
 
 
 
@@ -18,8 +18,9 @@ const Basket = ({ baskets, handleDeleteProduct }) => {
               fullPrice += item.price
               return (
                 <p key={"basket" + item.id * fullPrice} style={{ fontSize: '15px' }}>
-                  <img src={item.photo} alt='' style={{ width: '30px', height: '30px' }} />
-                  {'  ' + item.item_name} {item.price}₽ <CloseButton onClick={() => handleDeleteProduct(item.id)} />
+                  <img src={item.photo} alt='' style={{ width: '30px', height: '30px', float: 'left' }} />
+                  {'  ' + item.item_name} {item.price}₽ 
+                  <CloseButton style={{ float: 'right' }} onClick={() => handleDeleteProduct(item.id)} />
                 </p>
               )
             })
